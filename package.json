@@ -1,7 +1,7 @@
 {
   "name": "admin---khoa-pham",
   "version": "1.0.0",
-  "homepage": "https://github.com/viettask/admin_NodeJS.git",
+  "homepage": "https://viettask.github.io/admin_NodeJS/",
   "description": "",
   "main": "index.js",
   "scripts": {
