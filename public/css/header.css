@@ -1,0 +1,31 @@
+header {
+    background: rgb(50 50 52);
+    color:white;
+}
+.header__logo {
+    padding: 10px;
+    text-align: center;
+}
+.header__logo img {
+    width:50px;
+}
+.header__info {
+    padding:17px 0;
+}
+
+.header__info {
+    float: right;
+    position: relative;
+} 
+
+.header__info img{
+    width:30px;
+}
+
+.dropdown-menu>li>a {
+    padding:3px 10px;
+}
+
+.dropdown-menu>li>a span{
+    margin-right:7px;
+}

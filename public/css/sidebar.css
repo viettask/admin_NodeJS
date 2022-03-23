@@ -1,0 +1,28 @@
+.main_sidebar {
+    background: #515151;
+    height: 100vh;
+}
+
+.main_sidebar ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+.main_sidebar ul li a {
+    display:block;
+    padding:15px;
+    color: #d0d0d0;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(50 50 52);;
+    text-decoration: none;
+    
+}
+
+.main_sidebar ul li a:hover{
+    background: #222223;
+}
+
+.main_sidebar ul li a span {
+    margin-right: 7px;
+}
