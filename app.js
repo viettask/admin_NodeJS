@@ -16,6 +16,6 @@ app.use(express.static('public'));
 //Gọi đến file control
 app.use('/',require('./core/control'));
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log('Example app listening on port '+port);
 });
