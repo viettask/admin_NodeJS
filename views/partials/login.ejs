@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Login</title>
+    <style>
+        body{
+            background: rgb(186, 231, 186);
+        }
+        .login{
+            width: 500px;
+            border: 1px solid black;
+            padding:20px;
+            background: rgb(237 237 237);
+            text-align: center;
+            position:absolute;
+            left:50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 20px;
+        }
+        .login hr {
+            border-bottom: 0.5px solid black;    
+        }
+        .login h1 {
+            margin-top: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1>Login</h1>
+        <hr>
+        <div class="form">
+            <form id="loginForm">
+                <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input id="username" type="text" class="form-control" name="username" placeholder="Tên Đăng Nhập">
+                </div>
+                </div>
+
+                <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input id="password" type="password" class="form-control" name="password" placeholder="Mật Khẩu">
+                </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label><input type="checkbox">Nhớ Mật Khẩu</label>
+                      </div>
+                      <button type="submit" class="btn btn-default">Đăng Nhập</button>
+                </div>
+              </form>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#loginForm').on('submit', (e)=>{
+                e.preventDefault();
+
+                //1. Khai báo biến
+                var username = password = '', flag = 1;
+
+                //2. Lấy dữ liệu
+                username = $('#username').val();
+                password = $('#password').val();  
+                
+                //3.Kiểm tra dữ liệu
+
+                //4.Tổng hợp
+                if(flag ==1) {
+                    //Gửi Ajax
+                    // alert(username + ' '+ password);
+                    // success: function(results) {
+                    //     console.log(results);
+                    // }
+
+                    $.ajax({
+                        url: 'admin/thanh-vien/loginProcess',
+                        type: 'POST',
+                        data: {username,password},
+                        success: function(results) {
+                            alert(results.msg);
+                            if(results.kq == 1) {
+                                //tự động chuyển trang về bảng dieu khiển
+                                window.location.href = '/admin/bang-dieu-khien/index';
+                            }
+                        }
+                    })
+                    return false;
+                }
+
+
+                
+            })
+        })
+    </script>
+</body>
+</html>
