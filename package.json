@@ -1,15 +1,25 @@
 {
   "name": "admin---khoa-pham",
   "version": "1.0.0",
+<<<<<<< HEAD
   "homepage": "https://admin-nodejs.herokuapp.com/",
+=======
+  "homepage": "https://viettask.github.io/admin_NodeJS/",
+>>>>>>> 2ff686694b723063579816909e5b233c8bbed0aa
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",
+<<<<<<< HEAD
     "build": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+=======
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+>>>>>>> 2ff686694b723063579816909e5b233c8bbed0aa
   },
   "keywords": [],
   "author": "",
